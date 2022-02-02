@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "../App.css";
+
 const FormTodo = (props) => {
    const [description, setDescription] = useState("");
    const { handleAddItem } = props;
@@ -10,7 +12,6 @@ const FormTodo = (props) => {
          id: (+new Date()).toString(),
          description
       });
-      console.log(description);
       setDescription("");
    }
 

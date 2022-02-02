@@ -1,5 +1,7 @@
 import React, {Fragment} from "react";
 
+import "../App.css";
+
 const Checkbox = props => {
    const {
       onChange,

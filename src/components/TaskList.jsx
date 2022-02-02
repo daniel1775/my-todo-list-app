@@ -1,6 +1,8 @@
 import React from "react";
 import Checkbox from "./Checkbox";
 
+import "../App.css";
+
 const TaskList = props => {
    const {list, setList} = props;
 
@@ -18,11 +20,10 @@ const TaskList = props => {
       setList(updateList);
    }
 
-   console.log("List:" + list);
-
    const chk = list.map(item => (
       <Checkbox key={item.id} data={item} onChange={onChangeStatus}></Checkbox>
    ));
+   
    return(
       <div className="todo-list">
          {list.length ? chk : "No tasks"}
